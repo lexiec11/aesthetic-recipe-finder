@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aesthetic Recipe Finder</title>
+  <meta name="description" content="Discover beautiful recipes with this aesthetic meal search app powered by TheMealDB." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Aesthetic Recipe Finder</h1>
+    <p>Discover beautiful meals, find your next favorite recipe, and get cooking with ease.</p>
+  </header>
+
+  <!-- Search -->
+  <section class="search-section" aria-label="Search recipes">
+    <form class="search-wrapper" id="search-form">
+      <div class="search-input-wrap">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" />
+        </svg>
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Search for a recipe..."
+          aria-label="Search recipes"
+        />
+      </div>
+      <button type="submit" class="search-btn" id="search-btn">Search</button>
+    </form>
+  </section>
+
+  <!-- Status (loading / error / empty) -->
+  <div id="status" class="status hidden"></div>
+
+  <!-- Recipe Grid -->
+  <section id="recipe-grid" class="recipe-grid" aria-label="Recipe results"></section>
+
+  <!-- Modal -->
+  <div id="modal-overlay" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal" id="modal">
+      <button class="modal__close" id="modal-close" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <img id="modal-img" class="modal__img" src="" alt="" />
+      <div class="modal__body">
+        <div>
+          <h2 id="modal-title" class="modal__title"></h2>
+          <div id="modal-tags" class="modal__tags"></div>
+        </div>
+        <div id="modal-ingredients-section">
+          <h3 class="modal__section-title">Ingredients</h3>
+          <ul id="modal-ingredients" class="ingredients-list"></ul>
+        </div>
+        <div id="modal-instructions-section">
+          <h3 class="modal__section-title">Instructions</h3>
+          <p id="modal-instructions" class="instructions"></p>
+        </div>
+        <div id="modal-youtube-wrap"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
