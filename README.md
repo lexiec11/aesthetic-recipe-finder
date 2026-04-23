@@ -15,4 +15,7 @@ A responsive API-powered recipe search app built with HTML, CSS, and JavaScript 
 TheMealDB API: https://www.themealdb.com/api.php
 
 ## Status
-In progress
+FINISHED
+
+## Live Link 
+https://lexiec11.github.io/aesthetic-recipe-finder/
